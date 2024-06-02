@@ -1,0 +1,54 @@
+pseuod-element= keyword added after a selector
+that's used to style a specific parts of an element
+
+selector::pseuso-element
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="style.css">
+
+	<h1>Hello</h1>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi necessitatibus animi ea nobis magnam obcaecati accusantium laboriosam voluptas aliquid odio molestiae unde quo, quam, quos ab voluptatem maiores quibusdam fuga!</p>
+
+	<ul id="fruit">
+		<li id="mango">mango</li>
+		<li id="orange">orange</li>
+		<li id="banana">banana</li>
+	</ul>
+
+</body>
+</html>
+
+
+style.css
+
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+p::first-line{
+    background-color: aqua;
+}
+p::selection{
+    color: hsl(87, 96%, 52%);
+    background-color: gray;
+}
+#fruit li::before{
+    content: "✔";
+}
+#mango::after{
+    content: "🥭";
+}
+#orange::after{
+    content: "🍊";
+}
+#banana::after{
+    content: "🍌";
+}
+#fruit li::marker{
+    content: "👍";
+    color: black;
+}
